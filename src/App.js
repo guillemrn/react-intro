@@ -4,7 +4,6 @@ import { TodoSearchField } from './TodoSearchField';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
-import './App.css';
 
 const defaultTodos = [
   { text: "Hacer tarea", completed: false },
@@ -17,9 +16,14 @@ const defaultTodos = [
 
 function App() {
   return (
-    <React.Fragment>
-      <TodoCounter completed={15} total={20} />
-      <TodoSearchField />
+    <div className='font-sans antialiased p-6'>
+      <div>
+        <TodoCounter completed={15} total={20} />
+        <div className='flex justify-between items-center'>
+          <TodoSearchField />
+          <CreateTodoButton />
+        </div>
+      </div>
 
       <TodoList>
         {defaultTodos.map(todo => (
@@ -31,9 +35,8 @@ function App() {
         ))}
       </TodoList>
 
-      <CreateTodoButton />
 
-    </React.Fragment>
+    </div>
   );
 }
 

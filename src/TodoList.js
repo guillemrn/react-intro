@@ -1,6 +1,6 @@
 function TodoList({ children }) {
   return (
-    <ul>
+    <ul className="flex gap-4 flex-col my-4">
       {children}
     </ul>
   )

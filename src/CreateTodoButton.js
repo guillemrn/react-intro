@@ -1,6 +1,10 @@
+import { AddIcon } from "./icons/AddIcon"
+
 function CreateTodoButton() {
   return (
-    <button>Agregar +</button>
+    <button className="flex items-center justify-center gap-1 text-base font-bold py-2 px-4 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-all">
+      Agregar <i><AddIcon color="#ffffff"/></i>
+    </button>
   )
 }
 
