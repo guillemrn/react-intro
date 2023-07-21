@@ -1,3 +1,4 @@
+import React from "react";
 import { CheckIcon } from "./icons/CheckIcon"
 import { XIcon } from "./icons/XIcon"
 
