@@ -20,8 +20,8 @@ body {
 }
 .todo-item {
   border: 2px solid #94a3b8;
-  width: 22.75px;
-  height: 22.75px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   transition: 300ms;
   cursor: pointer;

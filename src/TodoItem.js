@@ -14,7 +14,7 @@ function TodoItem(props) {
     <li className="bg-white rounded-xl flex items-center justify-between p-4">
       <div className="flex items-center gap-2">
         <i>
-          {props.completed ? <CheckIcon color="#3b82f6" /> : <div className="todo-item"></div> }
+          {props.completed ? <CheckIcon color="#3b82f6" /> : <div className="todo-item" onClick={props.onComplete}></div> }
         </i>
         {/* <i>< {props.completed}</i> */}
         <div className="flex flex-col">
@@ -25,7 +25,7 @@ function TodoItem(props) {
           </span>
         </div>
       </div>
-      <button className="button-delete">
+      <button className="button-delete" onClick={props.onDelete}>
         <XIcon />
       </button>
     </li>
