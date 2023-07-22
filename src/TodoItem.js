@@ -2,14 +2,12 @@ import React from "react";
 import { CheckIcon } from "./icons/CheckIcon"
 import { XIcon } from "./icons/XIcon"
 
-const todayDate = Date.now();
 
 function TodoItem(props) {
-  const currentDate = new Date(todayDate)
-
-  const day = currentDate.getDate()
-  const month = currentDate.getMonth() + 1
-  const year = currentDate.getFullYear()
+  const createDateObj = new Date(props.createdDate);
+  const day = createDateObj.getDate();
+  const month = createDateObj.getMonth() + 1;
+  const year = createDateObj.getFullYear();
 
   return (
     <li className="bg-white rounded-xl flex items-center justify-between p-4">
