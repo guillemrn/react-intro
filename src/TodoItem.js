@@ -17,7 +17,7 @@ function TodoItem(props) {
         </i>
         {/* <i>< {props.completed}</i> */}
         <div className="flex flex-col">
-          <span className={`text-lg text-slate-900 ${props.completed && "line-through decoration-slate-900"}`}>{props.text}</span>
+          <span className={`text-lg text-slate-900 ${props.completed && "line-through decoration-slate-900 "}`}>{props.text}</span>
           <span className="text-xs text-slate-500">
             
             {props.completed ? `Completado el ${day}/${month}/${year}` : `Creado el ${day}/${month}/${year}` }
