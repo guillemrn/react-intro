@@ -1,10 +1,17 @@
+import { LightIcon } from "../icons/LightIcon"
+import { DarkIcon } from "../icons/DarkIcon"
+
 function TodoCounter({ total, completed, todosCompleted }) {
   return (
-    <div>
-      <h1 className="text-xl font-bold tracking-wide my-3 text-slate-900 lg:text-2xl">
-        ¡Descubre la simplicidad de  <span className="italic text-blue-500">TodoMachine</span>: Organiza y completa tus tareas sin esfuerzo.
+    <div className="relative">
+      <div className="flex gap-2 absolute right-0 top-0">
+        <LightIcon />
+        <DarkIcon />
+      </div>
+      <h1 className="text-lg font-bold tracking-wide my-3 text-slate-900 dark:text-white lg:text-2xl">
+        <span className="italic text-blue-500">TodoMachine</span>: Organiza y completa tus tareas sin esfuerzo.
       </h1>
-      <h2 className="text-slate-700 text-xl mb-4">
+      <h2 className="text-slate-700 text-md mb-4 dark:text-white">
         {
           todosCompleted ?
           ( `Felicidades! Completaste todas tus tareas.`)

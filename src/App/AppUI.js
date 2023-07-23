@@ -44,7 +44,7 @@ function AppUI({
             animationData={ChecklistAnimation}
             loop={true}
           />
-          <p className='text-slate-700 text-xl mb-2'>Agrega tu primera tarea para comenzar</p>
+          <p className='text-slate-700 text-xl mb-2 dark:text-white'>Agrega tu primera tarea para comenzar</p>
           <CreateTodoButton />
         </div>
         : <TodoList>

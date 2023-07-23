@@ -10,14 +10,14 @@ function TodoItem(props) {
   const year = createDateObj.getFullYear();
 
   return (
-    <li className="bg-white rounded-xl flex items-center justify-between p-4">
+    <li className="bg-white dark:bg-slate-800 rounded-xl flex items-center justify-between p-4">
       <div className="flex items-center gap-2">
         <i>
           {props.completed ? <CheckIcon color="#3b82f6" /> : <div className="todo-item" onClick={props.onComplete}></div> }
         </i>
         {/* <i>< {props.completed}</i> */}
         <div className="flex flex-col">
-          <span className={`text-lg text-slate-900 ${props.completed && "line-through decoration-slate-900 "}`}>{props.text}</span>
+          <span className={`text-lg text-slate-900d dark:text-white ${props.completed && "line-through decoration-slate-900 dark:decoration-white"}`}>{props.text}</span>
           <span className="text-xs text-slate-500">
             
             {props.completed ? `Completado el ${day}/${month}/${year}` : `Creado el ${day}/${month}/${year}` }
