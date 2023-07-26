@@ -13,11 +13,16 @@ import { useLocalStorage } from './useLocalStoraje';
 // ]
 
 // localStorage.setItem(itemName, JSON.stringify(defaultTodos))
-// localStorage.removeItem(itemName)
+// localStorage.removeItem('TodoMachine_V1')
 
 
 function App() {
-  const [todos, saveTodos] = useLocalStorage('TodoMachine_V1', [])
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    loading,
+    error
+  } = useLocalStorage('TodoMachine_V1', [])
   const [searchValue, setSearchValue] = React.useState("")
 
   const completedTodos = todos.filter(todo => !!todo.completed).length
@@ -53,6 +58,8 @@ function App() {
 
   return (
     <AppUI
+      loading={loading}
+      error={error}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
       searchValue={searchValue}

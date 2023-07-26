@@ -4,10 +4,10 @@ import { DarkIcon } from "../icons/DarkIcon"
 function TodoCounter({ total, completed, todosCompleted }) {
   return (
     <div className="relative">
-      <div className="flex gap-2 absolute right-0 top-0">
+      {/* <div className="flex gap-2 absolute right-0 top-0">
         <LightIcon />
         <DarkIcon />
-      </div>
+      </div> */}
       <h1 className="text-lg font-bold tracking-wide my-3 text-slate-900 dark:text-white lg:text-2xl">
         <span className="italic text-blue-500">TodoMachine</span>: Organiza y completa tus tareas sin esfuerzo.
       </h1>
